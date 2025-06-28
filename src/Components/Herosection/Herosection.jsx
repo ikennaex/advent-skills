@@ -16,7 +16,7 @@ const Herosection = () => {
       Advent Skills Domestic Recruiters
     </p>
     <h1 className="text-5xl lg:text-7xl font-black text-white leading-tight pb-6 slide-in-bottom herotext">
-      Trusted Domestic Help, Tailored to Your Needs
+      Trusted Domestic Staffing Solutions for Every Home
     </h1>
     <p className="text-white text-base lg:text-lg slide-in-left">
       At Advent Skills Domestic Recruitment, we connect families and homes with skilled, vetted, and reliable domestic workers from nannies and housekeepers to cooks and caregivers. Your peace of mind starts here.
@@ -26,14 +26,14 @@ const Herosection = () => {
       <a href="https://wa.me/2348135217518" target="_blank" rel="noopener noreferrer">
         <button className="bg-customYellow text-black font-bold p-4 rounded-2xl flex items-center gap-2 lg:px-8">
           <FaSuitcase size={24} />
-          Hire a worker
+          Hire a Domestic Worker
         </button>
       </a>
 
       <a href="https://wa.me/2348135217518" target="_blank" rel="noopener noreferrer">
         <button className="bg-customYellow text-black font-bold p-4 rounded-2xl flex items-center gap-2 lg:px-8">
           <FaHandsHelping size={24} />
-          Be a worker
+          Register as a Worker
         </button>
       </a>
     </div>

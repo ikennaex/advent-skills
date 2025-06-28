@@ -7,20 +7,16 @@ import { logo } from '../../imports';
 const Navbar = () => {
     const menuItems = [
       {
-        name: "WORKERS",
-        link: "/about"
-      },
-      {
         name: "EMPLOYEES",
         link: "/services"
       },
       {
         name: "WHY CHOOSE US",
-        link: "/advantages"
+        link: "/whychooseus"
       },
       {
         name: "ABOUT",
-        link: "/abouttheceo"
+        link: "/about"
       },
     ]
 
@@ -31,12 +27,12 @@ const Navbar = () => {
   }
 
   return (
-    <div className='container mx-auto px-9 py-'>
+    <div className='container mx-auto px-9'>
         <div className='lg:py-0.5 flex items-center justify-between'>
         <Link to = "/" >
         <img className='lg:h-24 lg:mr-60 h-16' src= {logo} alt="" />
         </Link>
-        <div className='hidden text-sm font-bold gap-20 mx-auto lg:flex cursor-pointer'>
+        <div className='hidden text-sm font-bold gap-20 mx-auto lg:flex cursor-pointer '>
             {menuItems.map(menu => (
               menu.link.includes("#") ? 
               <a href={menu.link} className='nav-link'>
@@ -64,7 +60,7 @@ const Navbar = () => {
         </div>
         <div>
             {open && 
-          <div className='flex flex-col gap-5 py-5'>
+          <div className='flex flex-col gap-5 py-5 '>
             {menuItems.map((menu) => {
               return (
               menu.link.includes("#") ? 

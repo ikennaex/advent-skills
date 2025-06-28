@@ -3,7 +3,7 @@ import React from 'react';
 const testimonials = [
   {
     id: 1,
-    name: 'Jane Doe',
+    name: 'Josephine Amaka',
     title: 'CEO, TechCorp',
     quote:
       'Advent Skills helped us find the perfect domestic staff. Their service is reliable and professional.',
@@ -12,7 +12,7 @@ const testimonials = [
   },
   {
     id: 2,
-    name: 'John Smith',
+    name: 'John Tayo',
     title: 'Entrepreneur',
     quote:
       'The recruitment process was smooth and stress-free. Highly recommended!',
@@ -21,7 +21,7 @@ const testimonials = [
   },
   {
     id: 3,
-    name: 'Sarah Johnson',
+    name: 'Amina Opeyemi',
     title: 'Homeowner',
     quote:
       'I love the professionalism of the staff we hired through Advent Skills.',
