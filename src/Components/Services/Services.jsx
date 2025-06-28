@@ -1,5 +1,6 @@
 import React from 'react'
 import { Briefcase, Users, Car, ChefHat, HeartPulse, ClipboardList } from "lucide-react";
+import { img2 } from '../../imports';
 
 const Services = () => {
 
@@ -50,6 +51,11 @@ const Services = () => {
         <p className="text-lg text-gray-500">What We Offer</p>
       </div>
 
+      <div className='flex gap-5'>
+      <div className='w-10/12'>
+        <img className='w-full' src= {img2} alt="" />
+      </div>
+
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {services.map((service, index) => {
           const Icon = service.icon;
@@ -58,7 +64,7 @@ const Services = () => {
               key={index}
               className="bg-white shadow-md hover:shadow-lg transition duration-300 rounded-2xl p-6 border border-gray-100"
             >
-              <div className="flex items-center gap-4 mb-4">
+              <div className="flex flex-wrap items-center gap-4 mb-4">
                 <div className="p-3 rounded-xl bg-indigo-100 text-indigo-600">
                   <Icon className="w-6 h-6" />
                 </div>
@@ -68,6 +74,8 @@ const Services = () => {
             </div>
           );
         })}
+      </div>
+
       </div>
 
       <div className="mt-10 text-center max-w-2xl mx-auto">

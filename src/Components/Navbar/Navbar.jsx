@@ -7,8 +7,8 @@ import { logo } from '../../imports';
 const Navbar = () => {
     const menuItems = [
       {
-        name: "EMPLOYEES",
-        link: "/services"
+        name: "WORKERS",
+        link: "/workers"
       },
       {
         name: "WHY CHOOSE US",

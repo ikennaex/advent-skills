@@ -6,6 +6,8 @@ import Footer from './Components/Footer/Footer'
 import About from './Pages/About/About'
 import WhyChooseUs from './Pages/WhyChooseUs/WhyChooseUsPage'
 import WorkerApplication from './Pages/WorkerApplication/WorkerApplication'
+import Workers from './Pages/Workers/Workers'
+import WorkerDetails from './Pages/Workers/WorkerDetails'
 
 const App = () => {
   return (
@@ -17,6 +19,8 @@ const App = () => {
         <Route path= "/about" element = {<About />} />
         <Route path= "/whychooseus" element = {<WhyChooseUs />} />
         <Route path= "/worker-application" element = {<WorkerApplication />} />
+        <Route path= "/workers" element = {<Workers />} />
+        <Route path= "/workers/:id" element = {<WorkerDetails />} />
       </Routes>
 
       <Footer />

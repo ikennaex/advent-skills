@@ -3,6 +3,7 @@ import { FaSuitcase } from "react-icons/fa6";
 import { FaHandsHelping } from "react-icons/fa";
 import "./herosection.css"
 import { img1 } from '../../imports';
+import { Link } from 'react-router-dom';
 
 const Herosection = () => {
   return (
@@ -23,19 +24,19 @@ const Herosection = () => {
     </p>
 
     <div className="flex flex-wrap gap-4 pt-9 slide-in-left2">
-      <a href="https://wa.me/2348135217518" target="_blank" rel="noopener noreferrer">
+      <Link to= "/workers">
         <button className="bg-customYellow text-black font-bold p-4 rounded-2xl flex items-center gap-2 lg:px-8">
           <FaSuitcase size={24} />
           Hire a Domestic Worker
         </button>
-      </a>
+      </Link>
 
-      <a href="https://wa.me/2348135217518" target="_blank" rel="noopener noreferrer">
+      <Link to = "/worker-application">
         <button className="bg-customYellow text-black font-bold p-4 rounded-2xl flex items-center gap-2 lg:px-8">
           <FaHandsHelping size={24} />
           Register as a Worker
         </button>
-      </a>
+      </Link>
     </div>
   </div>
 
