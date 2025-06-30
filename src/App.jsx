@@ -8,6 +8,9 @@ import WhyChooseUs from './Pages/WhyChooseUs/WhyChooseUsPage'
 import WorkerApplication from './Pages/WorkerApplication/WorkerApplication'
 import Workers from './Pages/Workers/Workers'
 import WorkerDetails from './Pages/Workers/WorkerDetails'
+import Admin from './Pages/Admin/Admin'
+import PendingRequests from './Pages/Admin/PendingRequests'
+import ApproveWorkers from './Pages/Admin/ApproveWorkers'
 
 const App = () => {
   return (
@@ -21,6 +24,11 @@ const App = () => {
         <Route path= "/worker-application" element = {<WorkerApplication />} />
         <Route path= "/workers" element = {<Workers />} />
         <Route path= "/workers/:id" element = {<WorkerDetails />} />
+
+        {/* ADMIN ROUTES  */}
+        <Route path= "/admin" element = {<Admin />} />
+        <Route path= "/admin/requests" element = {<PendingRequests />} />
+        <Route path= "/approveworkers/:id" element = {<ApproveWorkers />} />
       </Routes>
 
       <Footer />
