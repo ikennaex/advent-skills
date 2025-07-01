@@ -5,6 +5,7 @@ import {
   GraduationCap,
   HelpCircle,
 } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export default function ForWorkers() {
   return (
@@ -23,12 +24,12 @@ export default function ForWorkers() {
         <p className="text-gray-600 mb-6">
           Register as a job seeker by filling our simple application form.
         </p>
-        <a
-          href="/worker-application"
+        <Link
+          to="/worker-application"
           className="inline-block bg-indigo-600 text-white px-6 py-3 rounded-lg hover:bg-indigo-700 transition"
         >
           Fill Application Form
-        </a>
+        </Link>
       </div>
 
       {/* Info Grid */}
