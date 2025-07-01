@@ -4,7 +4,7 @@ const testimonials = [
   {
     id: 1,
     name: 'Josephine Amaka',
-    title: 'CEO, TechCorp',
+    title: 'CEO, Fashion Academy',
     quote:
       'Advent Skills helped us find the perfect domestic staff. Their service is reliable and professional.',
   },
@@ -43,7 +43,7 @@ const Testimonial = () => {
                 alt={testimonial.name}
                 className="w-12 h-12 rounded-full object-cover mr-4"
               />
-              }worker
+              }
               <div>
                 <h4 className="font-semibold text-gray-800">{testimonial.name}</h4>
                 <p className="text-sm text-gray-500">{testimonial.title}</p>
