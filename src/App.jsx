@@ -14,9 +14,10 @@ import ApproveWorkers from './Pages/Admin/ApproveWorkers'
 
 const App = () => {
   return (
-    <div>
+    <div className='min-h-screen flex flex-col'>
       <Navbar />
 
+      <main className='flex-grow'>
       <Routes>
         <Route path= "/" element = {<Homepage />} />
         <Route path= "/about" element = {<About />} />
@@ -30,6 +31,7 @@ const App = () => {
         <Route path= "/admin/requests" element = {<PendingRequests />} />
         <Route path= "/approveworkers/:id" element = {<ApproveWorkers />} />
       </Routes>
+      </main>
 
       <Footer />
     </div>
