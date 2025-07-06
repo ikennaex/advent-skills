@@ -43,7 +43,7 @@ const Footer = () => {
           <h4 className="text-lg font-semibold mb-3">Contact</h4>
           <ul className="text-gray-400 text-sm space-y-2">
             <li>Email: info@adventskills.com.ng</li>
-            {/* <li>Phone: +234 800 000 0000</li> */}
+            <li>Phone: +234 814 006 2161</li>
             <li>21 Obafemi Awolowo way Ikeja, Lagos</li>
           </ul>
         </div>

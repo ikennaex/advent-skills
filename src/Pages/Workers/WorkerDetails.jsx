@@ -18,24 +18,37 @@ import { useEffect } from "react";
 import axios from "axios";
 import { format } from "date-fns";
 import { baseUrl } from "../../baseUrl";
+import Loader from "../../Components/Loader/Loader";
 
 const WorkerDetails = () => {
   const { id } = useParams();
   const [worker, setWorker] = useState([]);
+  const [loading, setLoading] = useState(false);
 
   // for whatsapp
   const message = `Hi, Advent Skills I would like to know what it takes to hire ${worker.name}`;
   const encodedMessage = encodeURIComponent(message);
-  const phoneNumber = "2347012345678";
+  const phoneNumber = "+2348140062161";
 
   useEffect(() => {
     const fetchWorker = async () => {
-      const response = await axios.get(`${baseUrl}/workers/${id}`);
-      setWorker(response.data);
+    setLoading(true);
+      try {
+        const response = await axios.get(`${baseUrl}/workers/${id}`);
+        setWorker(response.data);
+      } catch (error) {
+        console.error("Failed to fetch worker:", error);
+      } finally {
+        setLoading(false);
+      }
     };
 
     fetchWorker();
-  }, []);
+  }, [id]); // added `id` as a dependency in case it changes
+
+  if (loading) {
+    return <Loader/>
+  }
 
   if (!worker) {
     return (
@@ -48,7 +61,7 @@ const WorkerDetails = () => {
       <div className="w-full max-w-5xl bg-white rounded-3xl shadow-xl p-6 sm:p-10">
         {/* Back Button */}
         <Link
-          to="/"
+          to="/workers"
           className="flex items-center text-blue-700 hover:underline text-sm mb-8"
         >
           <ArrowLeft className="w-4 h-4 mr-2" />

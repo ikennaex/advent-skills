@@ -4,6 +4,7 @@ import { baseUrl } from "../../baseUrl";
 import axios from "axios";
 
 const WorkerApplication = () => {
+  const [loading, setLoading] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     dob: "",
@@ -39,6 +40,7 @@ const WorkerApplication = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true);
 
     try {
       const response = await axios.post(`${baseUrl}/workers`, formData);
@@ -76,6 +78,8 @@ const WorkerApplication = () => {
       });
     } catch (err) {
       console.log(err);
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -254,10 +258,15 @@ const WorkerApplication = () => {
 
       <button
         type="submit"
-        className="w-full bg-customGreen text-white py-2 px-4 rounded hover:bg-customGreen/90"
+        disabled={loading}
+        className={`w-full bg-customGreen text-white py-2 px-4 rounded hover:bg-customGreen/90 relative font-semibold transition-all duration-200 ${loading ? 'cursor-not-allowed opacity-70' : ''}`}
       >
-        Submit
-      </button>
+        {loading ? (
+          <div className="h-5 w-5 border-2 border-white border-t-transparent rounded-full animate-spin mx-auto" />
+        ) : (
+          'Submit'
+        )}
+    </button>
     </form>
   );
 };

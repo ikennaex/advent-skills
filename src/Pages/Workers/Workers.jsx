@@ -5,6 +5,7 @@ import { baseUrl } from "../../baseUrl";
 import axios from "axios";
 import { useEffect } from "react";
 import { useState } from "react";
+import Loader from "../../Components/Loader/Loader";
 
 // states 
 
@@ -50,17 +51,21 @@ const statesOfNigeria = [
 
 const Workers = () => {
   const [workers, setWorkers] = useState([]);
-
+  const [loading, setLoading] = useState(false);
   const [locationFilter, setLocationFilter] = useState("");
   const [roleFilter, setRoleFilter] = useState("");
+  
 
   useEffect(() => {
     const getWorkers = async () => {
+      setLoading(true);
       try {
         const response = await axios.get(`${baseUrl}/workers`);
         setWorkers(response.data);
       } catch (err) {
         console.log(err);
+      } finally {
+        setLoading(false);
       }
     };
 
@@ -76,6 +81,11 @@ const Workers = () => {
     const roleMatch = roleFilter ? worker.role === roleFilter : true;
     return locationMatch && roleMatch;
   });
+
+  if (loading) {
+    return <Loader/>
+  }
+  
   return (
     <div className="container mx-auto px-4 py-8">
       {/* Filter Section */}
