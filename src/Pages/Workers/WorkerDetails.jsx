@@ -77,12 +77,12 @@ const WorkerDetails = () => {
           <div className="text-center lg:text-left space-y-3">
             <h1 className="text-3xl font-bold text-gray-800">{worker.name}</h1>
 
-            <div className="flex items-center justify-center lg:justify-start gap-2 text-gray-700 text-sm">
+            <div className="flex items-center justify-center lg:justify-start gap-2 text-gray-700 text-md">
               <Briefcase className="w-4 h-4" />
               <span>{worker.role}</span>
             </div>
 
-            <div className="flex items-center justify-center lg:justify-start gap-2 text-gray-500 text-sm">
+            <div className="flex items-center justify-center lg:justify-start gap-2 text-gray-500 text-md">
               <MapPin className="w-4 h-4" />
               <span>{worker.stateofresidence}, NG</span>
             </div>
@@ -91,20 +91,20 @@ const WorkerDetails = () => {
 
         {/* Detailed Info */}
         <div className="mt-10 border-t pt-6 space-y-4 text-gray-700 text-base">
-          <div className="flex items-center gap-2">
+          {/* <div className="flex items-center gap-2">
             <Phone className="w-4 h-4 text-blue-700" />
             <span>{worker.phonenumber || "null"}</span>
-          </div>
+          </div> */}
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-gray-700 mt-6">
             {/* Salary */}
-            <div className="flex items-start gap-3 bg-gray-50 p-4 rounded-xl shadow-sm">
+            {/* <div className="flex items-start gap-3 bg-gray-50 p-4 rounded-xl shadow-sm">
               <DollarSign className="text-green-600 w-5 h-5 mt-1" />
               <div>
                 <p className="text-sm text-gray-500">Salary Expectation</p>
                 <p className="font-semibold text-base">₦70,000</p>
               </div>
-            </div>
+            </div> */}
 
             {/* Gender */}
             <div className="flex items-start gap-3 bg-gray-50 p-4 rounded-xl shadow-sm">
@@ -143,7 +143,7 @@ const WorkerDetails = () => {
               <div>
                 <p className="text-sm text-gray-500">Experience</p>
                 <p className="font-semibold text-base">
-                  {worker.experience || "null"}
+                  {worker.experience || "null"} years
                 </p>
               </div>
             </div>

@@ -10,23 +10,69 @@ const Requirements = () => {
 
         <h3 className="text-xl font-semibold text-yellow-600 mb-4">Requirements</h3>
 
-        <ul className="list-disc pl-5 space-y-2 text-gray-700 text-sm sm:text-base">
-          <li>Background Checks Completed</li>
-          <li>Good Character & Behavior</li>
-          <li>Respectful and Hardworking</li>
-          <li>Physically and Mentally Fit</li>
-          <li>Basic Communication Skills</li>
-          <li>Trustworthy and Honest</li>
-          <li>Willingness to Learn and Follow Instructions</li>
-          <li>Clean Personal Hygiene Habits</li>
-          <li>Neat and Presentable Appearance</li>
-          <li>Punctual and Reliable</li>
-          <li>Minimum Age Requirement Met (e.g., 18+)</li>
-          <li>Basic Knowledge of Household Duties (or Willing to Learn)</li>
-          <li>Ability to Work Respectfully in a Family Environment</li>
-          <li>No Criminal Record</li>
-          <li>Consent to Be Placed in Respectable Homes Only</li>
-        </ul>
+<ul className="grid sm:grid-cols-2 gap-x-6 gap-y-3 text-gray-800 text-sm sm:text-base leading-relaxed">
+  <li className="flex items-start gap-2">
+    <span className="text-green-500 mt-1">✔️</span>
+    <span>Background Checks Completed</span>
+  </li>
+  <li className="flex items-start gap-2">
+    <span className="text-green-500 mt-1">✔️</span>
+    <span>Good Character & Behavior</span>
+  </li>
+  <li className="flex items-start gap-2">
+    <span className="text-green-500 mt-1">✔️</span>
+    <span>Respectful and Hardworking</span>
+  </li>
+  <li className="flex items-start gap-2">
+    <span className="text-green-500 mt-1">✔️</span>
+    <span>Physically and Mentally Fit</span>
+  </li>
+  <li className="flex items-start gap-2">
+    <span className="text-green-500 mt-1">✔️</span>
+    <span>Basic Communication Skills</span>
+  </li>
+  <li className="flex items-start gap-2">
+    <span className="text-green-500 mt-1">✔️</span>
+    <span>Trustworthy and Honest</span>
+  </li>
+  <li className="flex items-start gap-2">
+    <span className="text-green-500 mt-1">✔️</span>
+    <span>Willingness to Learn and Follow Instructions</span>
+  </li>
+  <li className="flex items-start gap-2">
+    <span className="text-green-500 mt-1">✔️</span>
+    <span>Clean Personal Hygiene Habits</span>
+  </li>
+  <li className="flex items-start gap-2">
+    <span className="text-green-500 mt-1">✔️</span>
+    <span>Neat and Presentable Appearance</span>
+  </li>
+  <li className="flex items-start gap-2">
+    <span className="text-green-500 mt-1">✔️</span>
+    <span>Punctual and Reliable</span>
+  </li>
+  <li className="flex items-start gap-2">
+    <span className="text-green-500 mt-1">✔️</span>
+    <span>Minimum Age Requirement Met (e.g., 18+)</span>
+  </li>
+  <li className="flex items-start gap-2">
+    <span className="text-green-500 mt-1">✔️</span>
+    <span>Basic Knowledge of Household Duties (or Willing to Learn)</span>
+  </li>
+  <li className="flex items-start gap-2">
+    <span className="text-green-500 mt-1">✔️</span>
+    <span>Ability to Work Respectfully in a Family Environment</span>
+  </li>
+  <li className="flex items-start gap-2">
+    <span className="text-green-500 mt-1">✔️</span>
+    <span>No Criminal Record</span>
+  </li>
+  <li className="flex items-start gap-2">
+    <span className="text-green-500 mt-1">✔️</span>
+    <span>Consent to Be Placed in Respectable Homes Only</span>
+  </li>
+</ul>
+
       </div>
     </section>
   );

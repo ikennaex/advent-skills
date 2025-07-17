@@ -7,7 +7,7 @@ import { useEffect } from "react";
 import { useState } from "react";
 import Loader from "../../Components/Loader/Loader";
 
-// states 
+// states
 
 const statesOfNigeria = [
   "Abia",
@@ -46,7 +46,7 @@ const statesOfNigeria = [
   "Taraba",
   "Yobe",
   "Zamfara",
-  "FCT"
+  "FCT",
 ];
 
 const Workers = () => {
@@ -54,7 +54,6 @@ const Workers = () => {
   const [loading, setLoading] = useState(false);
   const [locationFilter, setLocationFilter] = useState("");
   const [roleFilter, setRoleFilter] = useState("");
-  
 
   useEffect(() => {
     const getWorkers = async () => {
@@ -76,16 +75,18 @@ const Workers = () => {
 
   const filteredWorkers = approvedWorkers.filter((worker) => {
     const locationMatch = locationFilter
-      ? worker.stateofresidence.toLowerCase().includes(locationFilter.toLowerCase())
+      ? worker.stateofresidence
+          .toLowerCase()
+          .includes(locationFilter.toLowerCase())
       : true;
     const roleMatch = roleFilter ? worker.role === roleFilter : true;
     return locationMatch && roleMatch;
   });
 
   if (loading) {
-    return <Loader/>
+    return <Loader />;
   }
-  
+
   return (
     <div className="container mx-auto px-4 py-8">
       {/* Filter Section */}
@@ -122,8 +123,13 @@ const Workers = () => {
               <option value="">All</option>
               <option value="Nanny">Nanny</option>
               <option value="Cleaner">Cleaner</option>
-              <option value="Cook">Cook</option>
+              <option value="Cook">Cook/Chef</option>
               <option value="Driver">Driver</option>
+              <option value="Househelp/Keeper">Househelp/Keeper</option>
+              <option value="Laundry Person">Laundry Person</option>
+              <option value="Gardener">Gardener</option>
+              <option value="Pool Cleaner/Attendant">Pool Cleaner/Attendant</option>
+              <option value="Personal Assistant/Errand Runners">Personal Assistant/Errand Runners</option>
             </select>
           </div>
         </div>
