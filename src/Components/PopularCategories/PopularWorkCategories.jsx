@@ -1,25 +1,39 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import {
   Baby,
-  Utensils,
   Car,
-  BrushCleaning,
+  Utensils,
+  Brush,
   GraduationCap,
   HeartHandshake,
-  BrainCog,
+  Home,
+  Shirt,
+  Leaf,
+  Droplets,
+  UserRound // 👈 new import
 } from 'lucide-react';
 
 const categories = [
   { name: 'Nanny', link: '/nanny', icon: Baby },
   { name: 'Chef', link: '/chef', icon: Utensils },
   { name: 'Driver', link: '/driver', icon: Car },
-  { name: 'Professional Maid', link: '/professionalmaid', icon: BrushCleaning },
+  { name: 'Professional Maid', link: '/professionalmaid', icon: Brush },
   { name: 'Tutor', link: '/tutor', icon: GraduationCap },
   { name: 'Elder Caregiver', link: '/caregiver', icon: HeartHandshake },
+  { name: 'Housekeeper', link: '/housekeeper', icon: Home },
+  { name: 'General Cleaner', link: '/general-cleaner', icon: Brush },
+  { name: 'Laundry Person', link: '/laundry', icon: Shirt },
+  { name: 'Gardener', link: '/gardener', icon: Leaf },
+  { name: 'Pool Cleaner', link: '/pool-cleaner', icon: Droplets },
+  { name: 'Personal Assistant', link: '/personal-assistant', icon: UserRound } // 👈 new entry
 ];
 
+
 const PopularWorkCategories = () => {
+  const [showAll, setShowAll] = useState(false);
+  const visibleCategories = showAll ? categories : categories.slice(0, 6);
+
   return (
     <div className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-100">
       <h2 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-6 text-center">
@@ -27,7 +41,7 @@ const PopularWorkCategories = () => {
       </h2>
 
       <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
-        {categories.map((category, index) => {
+        {visibleCategories.map((category, index) => {
           const Icon = category.icon;
           return (
             <Link
@@ -43,9 +57,17 @@ const PopularWorkCategories = () => {
           );
         })}
       </div>
+
+      <div className="text-center mt-8">
+        <button
+          onClick={() => setShowAll(!showAll)}
+          className="text-blue-600 font-medium hover:underline"
+        >
+          {showAll ? 'Show Less' : 'Show More'}
+        </button>
+      </div>
     </div>
   );
 };
 
 export default PopularWorkCategories;
-

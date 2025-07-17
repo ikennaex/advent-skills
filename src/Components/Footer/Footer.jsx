@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaFacebook, FaTwitter, FaInstagram } from 'react-icons/fa';
+import { FaFacebook, FaTiktok, FaInstagram } from 'react-icons/fa';
 import { logo } from '../../imports';
 import { Link } from 'react-router-dom';
 
@@ -52,9 +52,8 @@ const Footer = () => {
         <div>
           <h4 className="text-lg font-semibold mb-3">Follow Us</h4>
           <div className="flex space-x-4 text-gray-400 text-xl">
-            <a href="#"><FaFacebook className="hover:text-white" /></a>
-            <a href="#"><FaTwitter className="hover:text-white" /></a>
-            <a href="#"><FaInstagram className="hover:text-white" /></a>
+            <a target='_blank' href="https://www.facebook.com/share/1Bh7Suexs1/"><FaFacebook className="hover:text-white" /></a>
+            <a target='_blank' href="https://www.tiktok.com/@adventskillsdomes8"><FaTiktok className="hover:text-white" /></a>
           </div>
         </div>
       </div>

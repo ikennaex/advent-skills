@@ -7,6 +7,7 @@ import Services from '../../Components/Services/Services'
 import WhyChooseUs from '../../Components/WhyChooseUs/WhyChooseUs'
 import ForClients from '../../Components/ForClients/ForClients'
 import ForWorkers from '../../Components/ForWorker/ForWorker'
+import Requirements from '../../Components/Requirements/Requirements'
 
 const Homepage = () => {
   return (
@@ -16,6 +17,7 @@ const Homepage = () => {
         <Services />
         <WhyChooseUs />
         <TopStaff />
+        <Requirements/>
         <ForClients />
         <ForWorkers />
         <Testimonial />

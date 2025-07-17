@@ -17,6 +17,11 @@ import Driver from './Pages/Driver/Driver'
 import ProfessionalMaid from './Pages/ProfessionalMaid/ProfessionalMaid'
 import Caregiver from './Pages/Caregiver/Caregiver'
 import Tutor from './Pages/Tutor/Tutor'
+import GeneralCleaner from './Pages/GeneralCleaner/GeneralCleaner'
+import Laundry from './Pages/Laundry/Laundry'
+import Gardener from './Pages/Gardener.jsx/Gardener'
+import PoolCleaner from './Pages/PoolCleaner/PoolCleaner'
+import PersonalAssistant from './Pages/PersonalAssistant/PersonalAssistant'
 
 const App = () => {
   return (
@@ -37,6 +42,11 @@ const App = () => {
         <Route path= "/professionalmaid" element = {<ProfessionalMaid />} />
         <Route path= "/caregiver" element = {<Caregiver />} />
         <Route path= "/tutor" element = {<Tutor />} />
+        <Route path= "/general-cleaner" element = {<GeneralCleaner />} />
+        <Route path= "/laundry" element = {<Laundry />} />
+        <Route path= "/gardener" element = {<Gardener />} />
+        <Route path= "/pool-cleaner" element = {<PoolCleaner />} />
+        <Route path= "/personal-assistant" element = {<PersonalAssistant />} />
 
         {/* ADMIN ROUTES  */}
         <Route path= "/admin" element = {<Admin />} />
