@@ -2,4 +2,4 @@ const isDev = false; // set to true for local development
 
 export const baseUrl = isDev
   ? "http://localhost:4000"
-  : "https://www.adventskills.com.ng";
+  : "https://adventskills-api.vercel.app";
